@@ -8,3 +8,13 @@ img {
     height: auto;
 }
 
+
+/* apply to all elements*/
+* {
+    box-sizing: border-box;
+}
+
+/* set all links to orange color */
+a {
+    color: $mainOrange;
+}
