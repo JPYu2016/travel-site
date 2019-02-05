@@ -23,5 +23,12 @@ $("h1").remove();
 
 
 import MobileMenu from './modules/MobileMenu';
+import RevealOnScroll from './modules/RevealOnScroll';
+import $ from 'jquery'
 
 var mobileMenu = new MobileMenu();
+/*
+var revealOnScroll = new RevealOnScroll();
+*/
+var revealOnScrollFeatureItems = new RevealOnScroll($(".feature-items"), "85%");
+var revealOnScrollTestimonials = new RevealOnScroll($(".testimonial"), "60%");
