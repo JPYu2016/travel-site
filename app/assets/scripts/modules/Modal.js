@@ -6,22 +6,22 @@ class Modal {
         this.modal = $(".modal");
         this.closeModalButton = $(".modal__close");
 
-        this.closeModal.events();
+        this.events();
     }
 
     events() {
-        //  clciking the open modal button
+        //  clicking the open modal button
         this.openModalButton.click(this.openModal.bind(this));
-        //  clciking the x close modal button
+        //  clicking the x close modal button
         this.closeModalButton.click(this.closeModal.bind(this));
-        //  pushs any key
-        $().keyup(this.keyPressHandler.bind(this));
+        //  pushes any key
+        $(document).keyup(this.keyPressHandler.bind(this));
 
     }
 
     keyPressHandler(e) {
-        if (e.keyCoode == 27) {
-            this.closeModal.closeModal();
+        if (e.keyCode == 27) {
+            this.closeModal();
         }
     }
 
