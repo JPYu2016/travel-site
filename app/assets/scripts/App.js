@@ -34,7 +34,7 @@ var mobileMenu = new MobileMenu();
 /*
 var revealOnScroll = new RevealOnScroll();
 */
-var revealOnScrollFeatureItems = new RevealOnScroll($(".feature-items"), "85%");
+var revealOnScrollFeatureItems = new RevealOnScroll($(".feature-item"), "85%");
 var revealOnScrollTestimonials = new RevealOnScroll($(".testimonial"), "60%");
 
 var stickyHeader = new StickyHeader();

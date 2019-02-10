@@ -20,7 +20,7 @@ class RevealOnScroll {
             var currentItem = this;
 
             new Waypoint({
-                elment: currentItem,
+                element: currentItem,
                 handler: function() {
                     $(currentItem).addClass("reveal-item--is-visible");
                 },
@@ -49,7 +49,7 @@ class RevealOnScroll {
         this.itemsToReveal.each(function() {
             var currentItem = this;
             new Waypoint({
-                elment: currentItem,
+                element: currentItem,
                 handler: function() {
                     $(currentItem).addClass("reveal-item--is-visible");
                 },

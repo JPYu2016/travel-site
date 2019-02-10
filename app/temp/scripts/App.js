@@ -11254,7 +11254,7 @@ var mobileMenu = new _MobileMenu2.default();
 /*
 var revealOnScroll = new RevealOnScroll();
 */
-var revealOnScrollFeatureItems = new _RevealOnScroll2.default((0, _jquery2.default)(".feature-items"), "85%");
+var revealOnScrollFeatureItems = new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%");
 var revealOnScrollTestimonials = new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%");
 
 var stickyHeader = new _StickyHeader2.default();
@@ -11368,7 +11368,7 @@ class RevealOnScroll {
             var currentItem = this;
 
             new Waypoint({
-                elment: currentItem,
+                element: currentItem,
                 handler: function() {
                     $(currentItem).addClass("reveal-item--is-visible");
                 },
@@ -11402,7 +11402,7 @@ var RevealOnScroll = function () {
             this.itemsToReveal.each(function () {
                 var currentItem = this;
                 new Waypoint({
-                    elment: currentItem,
+                    element: currentItem,
                     handler: function handler() {
                         (0, _jquery2.default)(currentItem).addClass("reveal-item--is-visible");
                     },
