@@ -1489,8 +1489,8 @@ a {
 
 .reveal-item {
     opacity: 0;
-/*  transition: opacity 1.5s ease-out;
-*/  -webkit-transition: all 1.5s ease-out;  transition: all 1.5s ease-out;
+    transition: all 1.5s ease-out;
+    -webkit-transition: all 1.5s ease-out;
     -webkit-transform: scale(1.15);
             transform: scale(1.15);
 }

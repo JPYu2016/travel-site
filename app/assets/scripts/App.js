@@ -24,7 +24,7 @@ $("h1").remove();
 
 import MobileMenu from './modules/MobileMenu';
 import RevealOnScroll from './modules/RevealOnScroll';
-import $ from 'jquery'
+import $ from 'jquery';
 import StickyHeader from './modules/StickyHeader';
 import Modal from './modules/Modal';
 import { notDeepEqual } from 'assert';

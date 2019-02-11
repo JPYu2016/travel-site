@@ -11469,7 +11469,7 @@ var StickyHeader = function () {
         value: function createHeaderWaypoint() {
             var that = this;
             new Waypoint({
-                elment: this.headerTriggerElement[0],
+                element: this.headerTriggerElement[0],
                 handler: function handler(direction) {
                     /*
                         that.siteHeader.addClass("site-header--dark");
@@ -11489,7 +11489,7 @@ var StickyHeader = function () {
             this.pageSections.each(function () {
                 var currentPageSection = this;
                 new Waypoint({
-                    elment: currentPageSection,
+                    element: currentPageSection,
                     handler: function handler(direction) {
                         if (direction == "down") {
                             var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
@@ -11501,7 +11501,7 @@ var StickyHeader = function () {
                 });
 
                 new Waypoint({
-                    elment: currentPageSection,
+                    element: currentPageSection,
                     handler: function handler(direction) {
                         if (direction == "up") {
                             var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
