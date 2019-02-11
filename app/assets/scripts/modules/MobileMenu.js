@@ -19,14 +19,14 @@ class MobileMenu {
     events() {
     /*  this.menuIcon.click(this.toggleTheMenu);
    */   this.menuIcon.click(this.toggleTheMenu.bind(this));
-        console.log(this);
+    //  console.log(this);
     }
 
     toggleTheMenu() {
     /*  
         console.log("Hooray - the icon was clicked.");
     */
-        console.log(this);
+    //  console.log(this);
         /* addedan extra modifier */
         this.menuContent.toggleClass("site-header__menu-content--is-visible");
         this.siteHeader.toggleClass("site-header--is-expanded");

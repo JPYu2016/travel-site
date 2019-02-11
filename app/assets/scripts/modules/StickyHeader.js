@@ -1,6 +1,6 @@
-import $ from 'jquery'
+import $ from 'jquery';
 import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
-import smoothScroll from 'jquery-smooth-scroll'
+import smoothScroll from 'jquery-smooth-scroll';
 
 class StickyHeader {
     constructor() {
@@ -9,7 +9,7 @@ class StickyHeader {
         this.createHeaderWaypoint();
         this.pageSections = $(".page-section");
         this.headerLinks - $(".primary-nav a");
-        this.createPageSectionWaypoint();
+        this.createPageSectionWaypoints();
         this.addSmoothScrolling();
     }
 
@@ -20,26 +20,27 @@ class StickyHeader {
     createHeaderWaypoint() {
         var that = this;
         new Waypoint({
-            elment: this.headerTriggerElement[0],
+            element: this.headerTriggerElement[0],
             handler: function(direction) {
             /*
                 that.siteHeader.addClass("site-header--dark");
             */
                 if (direction == "down") {
                     that.siteHeader.addClass("site-header--dark");
-                } else {
+                } else 
+                if (direction == "up") {                
                     that.siteHeader.removeClass("site-header--dark");
                 }
             }
         });
     }
 
-    createPageSectionWaypoint() {
+    createPageSectionWaypoints() {
         var that = this;
         this.pageSections.each(function() {
             var currentPageSection = this;
             new Waypoint({
-                elment: currentPageSection,
+                element: currentPageSection,
                 handler: function(direction) {
                     if (direction == "down") {
                         var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
@@ -51,7 +52,7 @@ class StickyHeader {
             });
 
             new Waypoint({
-                elment: currentPageSection,
+                element: currentPageSection,
                 handler: function(direction) {
                     if (direction == "up") {
                         var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");

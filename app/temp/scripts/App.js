@@ -11304,7 +11304,7 @@ var MobileMenu = function () {
         value: function events() {
             /*  this.menuIcon.click(this.toggleTheMenu);
             */this.menuIcon.click(this.toggleTheMenu.bind(this));
-            console.log(this);
+            //  console.log(this);
         }
     }, {
         key: "toggleTheMenu",
@@ -11312,7 +11312,7 @@ var MobileMenu = function () {
             /*  
                 console.log("Hooray - the icon was clicked.");
             */
-            console.log(this);
+            //  console.log(this);
             /* addedan extra modifier */
             this.menuContent.toggleClass("site-header__menu-content--is-visible");
             this.siteHeader.toggleClass("site-header--is-expanded");
@@ -11455,7 +11455,7 @@ var StickyHeader = function () {
         this.createHeaderWaypoint();
         this.pageSections = (0, _jquery2.default)(".page-section");
         this.headerLinks - (0, _jquery2.default)(".primary-nav a");
-        this.createPageSectionWaypoint();
+        this.createPageSectionWaypoints();
         this.addSmoothScrolling();
     }
 
@@ -11469,27 +11469,27 @@ var StickyHeader = function () {
         value: function createHeaderWaypoint() {
             var that = this;
             new Waypoint({
-                elment: this.headerTriggerElement[0],
+                element: this.headerTriggerElement[0],
                 handler: function handler(direction) {
                     /*
                         that.siteHeader.addClass("site-header--dark");
                     */
                     if (direction == "down") {
                         that.siteHeader.addClass("site-header--dark");
-                    } else {
+                    } else if (direction == "up") {
                         that.siteHeader.removeClass("site-header--dark");
                     }
                 }
             });
         }
     }, {
-        key: 'createPageSectionWaypoint',
-        value: function createPageSectionWaypoint() {
+        key: 'createPageSectionWaypoints',
+        value: function createPageSectionWaypoints() {
             var that = this;
             this.pageSections.each(function () {
                 var currentPageSection = this;
                 new Waypoint({
-                    elment: currentPageSection,
+                    element: currentPageSection,
                     handler: function handler(direction) {
                         if (direction == "down") {
                             var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
@@ -11501,7 +11501,7 @@ var StickyHeader = function () {
                 });
 
                 new Waypoint({
-                    elment: currentPageSection,
+                    element: currentPageSection,
                     handler: function handler(direction) {
                         if (direction == "up") {
                             var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
