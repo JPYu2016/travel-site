@@ -891,13 +891,20 @@ a {
         font-weight: 300;
         line-height: 1.65;
     /*  font-size: 1.125rem;
-    */  margin: 0 0 1.8rem 0;   /* top right bottom left*/
-
-        @mixinb atSmall {
-            font-size: 1.125rem;
-        }
+    */  margin: 0 0 1.8rem 0;
 
 
+    }
+
+/* top right bottom left*/
+
+@media (min-width: 530px) {
+
+.generic-content-container p {
+            font-size: 1.125rem
+
+
+    }
     }
 
 .generic-content-container p a {
@@ -1273,10 +1280,6 @@ a {
         right: 10px;
     }
 
-/*
-        &__top {
-    */
-
 .site-header__menu-icon::before {
             content : "";
             position: absolute;
@@ -1300,21 +1303,16 @@ a {
             width: 20px;
             height: 3px;
             background-color: #FFF;
-        /*  transition: opacity .3s ease-out;
-        */  -webkit-transition: all .3s ease-out;  transition: all .3s ease-out;
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
             -webkit-transform-origin: 0 50%;
                     transform-origin: 0 50%;
         }
 
-/*
-        &__bottom {
-    */
-
 .site-header__menu-icon::after { 
             content : "";
             position: absolute;
-        /*  top: 16px;
-        */  bottom: 0;
+            bottom: 0;
             left: 0;
             width: 20px;
             height: 3px;
@@ -1351,19 +1349,13 @@ a {
         }
 
 .site-header__menu-content {
-    /*
-        display: none;
-    */
         opacity: 0;
         -webkit-transform: scale(1.2);
-                transform: scale(1.2);      /* zoom in */
-    /*  transition: opacity .3s ease-out;  *//*linear*/
+                transform: scale(1.2);
         -webkit-transition: all .3s ease-out;
         transition: all .3s ease-out;
         position: relative;
         z-index: -10;
-
-    /*  padding-top: 100px; */   /* on mobile. make it no overlap with logo icon*/
         padding-top: 90px;
         text-align: center;
     }
@@ -1371,9 +1363,6 @@ a {
 @media (min-width: 800px) {
 
 .site-header__menu-content {
-        /*
-            display: block;
-        */
             opacity: 1;  
             z-index: 1;
             -webkit-transform: scale(1);
@@ -1384,9 +1373,6 @@ a {
     }
 
 .site-header__menu-content--is-visible {
-        /*
-            display: block;
-        */
             opacity: 1;
             z-index: 1;
             -webkit-transform: scale(1);
@@ -1490,8 +1476,8 @@ a {
 
 .reveal-item {
     opacity: 0;
-/*  transition: opacity 1.5s ease-out;
-*/  -webkit-transition: opacity 1.5s ease-out;  transition: opacity 1.5s ease-out;
+    -webkit-transition: all 1.5s ease-out;
+    transition: all 1.5s ease-out;
     -webkit-transform: scale(1.15);
             transform: scale(1.15);
 }

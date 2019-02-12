@@ -8,9 +8,9 @@ class StickyHeader {
         this.headerTriggerElement = $(".large-hero__title");
         this.createHeaderWaypoint();
         this.pageSections = $(".page-section");
-        this.headerLinks - $(".primary-nav a");
+        this.headerLinks = $(".primary-nav a");
         this.createPageSectionWaypoints();
-        this.addSmoothScrolling();
+        this.addSmoothScrolling();    
     }
 
     addSmoothScrolling() {
@@ -22,13 +22,9 @@ class StickyHeader {
         new Waypoint({
             element: this.headerTriggerElement[0],
             handler: function(direction) {
-            /*
-                that.siteHeader.addClass("site-header--dark");
-            */
                 if (direction == "down") {
                     that.siteHeader.addClass("site-header--dark");
-                } else 
-                if (direction == "up") {                
+                } else {
                     that.siteHeader.removeClass("site-header--dark");
                 }
             }
@@ -64,8 +60,6 @@ class StickyHeader {
             });
         });
     }
-
 }
-
 
 export default StickyHeader;

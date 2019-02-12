@@ -11228,28 +11228,6 @@ var _assert = __webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*
-var $ = require('jquery');
-
-//var Person = require('./modules/Person');
-import Person from './modules/Person';
-
-class Adult extends Person {
-    payTaxes() {
-        console.log(this.Name + " now owes $0 in taxes.");
-    }
-}
-
-var john = new Person("Johmn Doe", "blue");
-john.greet();
-
-var jane = new Person("Jane Smith", "green");
-jane.greet();
-jane.payTaxes();
-
-$("h1").remove();
-*/
-
 var mobileMenu = new _MobileMenu2.default();
 /*
 var revealOnScroll = new RevealOnScroll();
@@ -11350,36 +11328,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-/*
-class RevealOnScroll {
-    constructor() {
-        this.itemsToReveal = $('.feature-item, .testimonial');
-        this.hideInitially();
-        this.createWaypoints();
-    }
-
-    hideInitially() {
-        this.itemsToReveal.addClass('reveal-item');
-    }
-
-    createWaypoints() {
-        this.itemsToReveal.each(function() {
-
-            var currentItem = this;
-
-            new Waypoint({
-                element: currentItem,
-                handler: function() {
-                    $(currentItem).addClass("reveal-item--is-visible");
-                },
-                offset: "85%"
-            });
-        });
-    }
-
-}
-*/
-
 var RevealOnScroll = function () {
     function RevealOnScroll(els, offset) {
         _classCallCheck(this, RevealOnScroll);
@@ -11454,7 +11402,7 @@ var StickyHeader = function () {
         this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title");
         this.createHeaderWaypoint();
         this.pageSections = (0, _jquery2.default)(".page-section");
-        this.headerLinks - (0, _jquery2.default)(".primary-nav a");
+        this.headerLinks = (0, _jquery2.default)(".primary-nav a");
         this.createPageSectionWaypoints();
         this.addSmoothScrolling();
     }
@@ -11471,12 +11419,9 @@ var StickyHeader = function () {
             new Waypoint({
                 element: this.headerTriggerElement[0],
                 handler: function handler(direction) {
-                    /*
-                        that.siteHeader.addClass("site-header--dark");
-                    */
                     if (direction == "down") {
                         that.siteHeader.addClass("site-header--dark");
-                    } else if (direction == "up") {
+                    } else {
                         that.siteHeader.removeClass("site-header--dark");
                     }
                 }
