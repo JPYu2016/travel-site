@@ -11455,7 +11455,7 @@ var StickyHeader = function () {
         this.createHeaderWaypoint();
         this.pageSections = (0, _jquery2.default)(".page-section");
         this.headerLinks - (0, _jquery2.default)(".primary-nav a");
-        this.createPageSectionWaypoint();
+        this.createPageSectionWaypoints();
         this.addSmoothScrolling();
     }
 
@@ -11483,8 +11483,8 @@ var StickyHeader = function () {
             });
         }
     }, {
-        key: 'createPageSectionWaypoint',
-        value: function createPageSectionWaypoint() {
+        key: 'createPageSectionWaypoints',
+        value: function createPageSectionWaypoints() {
             var that = this;
             this.pageSections.each(function () {
                 var currentPageSection = this;

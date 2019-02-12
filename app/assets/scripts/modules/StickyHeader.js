@@ -9,7 +9,7 @@ class StickyHeader {
         this.createHeaderWaypoint();
         this.pageSections = $(".page-section");
         this.headerLinks - $(".primary-nav a");
-        this.createPageSectionWaypoint();
+        this.createPageSectionWaypoints();
         this.addSmoothScrolling();
     }
 
@@ -34,7 +34,7 @@ class StickyHeader {
         });
     }
 
-    createPageSectionWaypoint() {
+    createPageSectionWaypoints() {
         var that = this;
         this.pageSections.each(function() {
             var currentPageSection = this;
