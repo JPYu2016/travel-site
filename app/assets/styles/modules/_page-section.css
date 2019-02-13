@@ -41,7 +41,7 @@
         @mixin atLarge {
             /* only when page-section--testimonials class is set with class .lazyloaded */
             &.lazyloaded {  
-                background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+                background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
                 background-size: cover;
             }
         /*
