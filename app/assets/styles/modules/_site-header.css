@@ -48,8 +48,7 @@
             transform: translateX(0);
 
             .site-header--dark & {  /* descendent object */
-                transform: scale(.57);
-
+                transform: scale(.55);
             }
         }
 
